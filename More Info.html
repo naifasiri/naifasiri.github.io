@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SOCCER WORLD</title>
+<meta charset="utf-8">
+<link href="pacific.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+<header><img src="images/banner.jpg"></header>
+
+<nav>
+ <ul>
+  <li><a href="index.html">Soccer World</a></li>
+  <li><a href="SOCCER HISTORY.html">Soccer History</a></li>
+  <li><a href="SOCCER POSITIONS.html">Soccer Positions</a></li>
+  <li><a href="SOCCER RULES.html">Soccer Rules</a></li>
+  <li><a href="VIDEOS.html">Videos</a></li>
+  <li><a href="More Info.html">More Info.</a></li>
+ </ul>
+</nav>
+<div id="content">
+<img src="images/Panorama.jpg">
+<div id="googleMap" style="width:Xpx;height:500px;"></div>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBnAYSrnwKMCe2XRsdPGx40w_VSum5my6s"></script>
+
+<script>
+var myCenter=new google.maps.LatLng(44.4758,-73.2119);
+var marker;
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+marker=new google.maps.Marker({
+  position:myCenter,
+  animation:google.maps.Animation.BOUNCE
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+<p><br><br>For more information about joining a soccer group<br>
+please contact the number below or send an email...Thank you<br>
+(888)888-0000</p>
+</div>
+<footer>
+Copyright Copyright &copy; 2014 Soccer World (Naif Asiri)<br>
+<a class="myEmail" href="mailto:aalitti@mhotmail.com">drop us an email</a>
+<p>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img style="border:0;width:88px;height:31px"
+            		 src="http://jigsaw.w3.org/css-validator/images/vcss"
+            		 alt="Valid CSS!" />
+				</a>
+		</p>
+</footer>
+</body>
+</html>
